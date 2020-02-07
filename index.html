@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>TaskMaster</title>
-  </head>
 
-  <body>
-    <script src="app/main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>TaskMaster</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="row  justify-content-center flex-column align-items-center" id="list-create">
+      <h1>Create a list!</h1>
+      <form onsubmit="app.listController.addList(event)">
+        <div class="form-group">
+          <input type="text" class="form-control" id="list-title" placeholder="Title" name="title">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row" id="lists">
+
+    </div>
+  </main>
+  <script src="app/main.js" type="module"></script>
+</body>
+
 </html>
