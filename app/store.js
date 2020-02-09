@@ -11,16 +11,21 @@ let _state = {
 function _loadState() {
   let data = JSON.parse(localStorage.getItem("TaskMaster"));
   if (data) {
-    data.lists = data.lists.map(l => new List(l));
+    console.log(data)
+    data.lists = data.lists.map(list => new List(list));
     _state = data;
   }
+  console.log(localStorage.getItem("TaskMaster"));
+  console.log(_state)
 }
-_loadState();
 
 class Store {
   /**
    * Provides access to application state data
    */
+  constructor() {
+    _loadState();
+  }
   get State() {
     return _state;
   }

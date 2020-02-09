@@ -1,0 +1,6 @@
+.item-delete{
+  color:black;
+}
+.item-delete:hover{
+  cursor: pointer;
+}
