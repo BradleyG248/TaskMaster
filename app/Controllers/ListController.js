@@ -54,18 +54,53 @@ export default class ListController {
     formData.reset();
   }
   deleteList(id) {
-    if (confirm("Are you sure?")) {
-      ListService.deleteList(id);
-      _drawLists();
-      _drawItems();
-    }
+    // @ts-ignore
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.value) {
+        ListService.deleteList(id);
+        _drawLists();
+        _drawItems();
+        // @ts-ignore
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+
   }
   deleteItem(id) {
-    if (confirm("Are you sure?")) {
-      ListService.deleteItem(id);
-      _drawLists();
-      _drawItems();
-    }
+    // @ts-ignore
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.value) {
+        ListService.deleteItem(id);
+        _drawLists();
+        _drawItems();
+        // @ts-ignore
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems

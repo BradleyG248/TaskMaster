@@ -12,22 +12,31 @@
 </head>
 
 <body>
-  <header class="container">
-    <div class="row  justify-content-center flex-column align-items-center" id="list-create">
-      <h1>Create a list!</h1>
-      <form onsubmit="app.listController.addList(event)">
-        <div class="form-group">
-          <input type="text" class="form-control" id="list-title" placeholder="Title" name="title">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </header>
-  <main class="container">
-    <div class="row" id="lists">
+  <div class="top-bg">
+    <header class="container">
+      <div class="row  justify-content-center flex-column align-items-center" id="list-create">
+        <h1 class="border-bottom-1 top-title">Create a list!</h1>
+        <form onsubmit="app.listController.addList(event)">
+          <div class="form-group">
+            <input type="text" class="form-control" id="list-title" placeholder="Title" name="title">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </header>
+  </div>
+  <div class="main-bg">
+    <main class="container">
+      <div class="row" id="lists">
 
-    </div>
-  </main>
+      </div>
+    </main>
+  </div>
+  <footer>
+
+  </footer>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 

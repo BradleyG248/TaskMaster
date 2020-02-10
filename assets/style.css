@@ -4,3 +4,15 @@
 .item-delete:hover{
   cursor: pointer;
 }
+.top-bg{
+  background-image:url("background.jpg");
+  background-repeat:repeat;
+  padding-bottom:2rem;
+}
+.main-bg{
+  background-image:url("notepad.jpg");
+  background-repeat:repeat;
+}
+.top-title{
+  border-bottom:0.15rem solid blue;
+}
